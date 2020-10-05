@@ -13,11 +13,13 @@ namespace FlappyBirdDemo.Web.Models
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public BirdModel Bird { get; set; }
-        public bool IsRunning { get; set; } = false;
+        public BirdModel Bird { get; private set; }
+        public PipeModel Pipe { get; private set; }
+        public bool IsRunning { get; private set; } = false;
         public GameManager()
         {
             Bird = new BirdModel();
+            Pipe = new PipeModel();
         }
 
         public async void MainLoop()
@@ -27,6 +29,10 @@ namespace FlappyBirdDemo.Web.Models
             {
                 Bird.Fall(_gravity);
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Bird)));
+
+                Pipe.Move();
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Pipe)));
+
 
                 if (Bird.DistanceFromGround <= 0)
                     GameOver();
