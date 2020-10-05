@@ -1,6 +1,6 @@
 ﻿@page "/game"
 
-<div class="game-container" @onclick="StartGame">
+<div class="game-container" @onclick="_gameManager.StartGame">
     <div class="sky">
         <div class="bird" style="@_birdCsss"></div>
     </div>
@@ -17,8 +17,4 @@
         _gameManager.PropertyChanged += (o, e) => StateHasChanged();
     }
 
-    void StartGame()
-    {
-        _gameManager.MainLoop();
-    }
 }

@@ -29,12 +29,24 @@ namespace FlappyBirdDemo.Web.Models
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Bird)));
 
                 if (Bird.DistanceFromGround <= 0)
-                {
-                    IsRunning = false;
-                }
+                    GameOver();
 
                 await Task.Delay(20);
             }
+        }
+
+        public void StartGame()
+        {
+            if (!IsRunning)
+            {
+                Bird = new BirdModel();
+                MainLoop();
+            }
+        }
+
+        public void GameOver()
+        {
+            IsRunning = false;
         }
     }
 }
