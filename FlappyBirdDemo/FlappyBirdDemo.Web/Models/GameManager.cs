@@ -40,6 +40,7 @@ namespace FlappyBirdDemo.Web.Models
             if (!IsRunning)
             {
                 Bird = new BirdModel();
+                Pipes = new List<PipeModel>();
                 MainLoop();
             }
         }
@@ -57,13 +58,16 @@ namespace FlappyBirdDemo.Web.Models
 
         public void CheckForCollisions()
         {
-            if (Bird.DistanceFromGround <= 0)
+            if (Bird.IsOnGround())
                 GameOver();
         }
         void ManagePipes()
         {
             if (!Pipes.Any() || Pipes.Last().DistanceFromLeft <= 250)
                 Pipes.Add(new PipeModel());
+
+            if (Pipes.First().IsOffScreen())
+                Pipes.Remove(Pipes.First());
         }
         public void MoveObjects()
         {
