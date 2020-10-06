@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\fURKc49aDAykkhOy9p27uyFa-qbYYhyg3ObJmwKbfxk=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\nU1LTMkxTOn4LwFNl_apaoOzBeNfucRovxMNgmuIwOQ=.hash",
       "Source": "D:\\Programmieren\\FlappyBirdBlazor\\FlappyBirdDemo\\FlappyBirdDemo.Web\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\FlappyBirdDemo.Web.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/FlappyBirdDemo.Web.dll.br"
     },
@@ -256,7 +256,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\xhiZVvweY7hS-CUKd0ONhUsve20AtFr0lRh9PimJwaA=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\kPWyDWQsWjjFWJG57K7qp9l0P8ERFq-nBrmIcKvzLHw=.hash",
       "Source": "D:\\Programmieren\\FlappyBirdBlazor\\FlappyBirdDemo\\FlappyBirdDemo.Web\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\FlappyBirdDemo.Web.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/FlappyBirdDemo.Web.pdb.br"
     },
@@ -281,7 +281,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.br"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\7egBrfBmwaG7BGCxORMCbEC_-rQ2Vhmx5Juh6KefknI=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\8P7bCPbon9keR3igC5_0AVVjXsYi_CHrRRqKzMA8uC4=.hash",
       "Source": "D:\\Programmieren\\FlappyBirdBlazor\\FlappyBirdDemo\\FlappyBirdDemo.Web\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.br"
     }
