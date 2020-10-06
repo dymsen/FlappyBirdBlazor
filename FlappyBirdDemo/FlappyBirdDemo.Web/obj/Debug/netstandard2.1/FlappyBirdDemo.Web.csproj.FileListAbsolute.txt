@@ -347,6 +347,6 @@ D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\ne
 D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\netstandard2.1\RazorDeclaration\Components\Pipe.razor.g.cs
 D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\netstandard2.1\Razor\Components\Bird.razor.g.cs
 D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\netstandard2.1\Razor\Components\Pipe.razor.g.cs
-D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\netstandard2.1\integrity\WQPTd47XlPqoBnJe2uajvC1pf_2V5HPgLkpms4oLR7g=.hash
-D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\netstandard2.1\integrity\ntw9E_dpQs4NEqSGVNTAxtG7Inr7G3Ko8KZrmrjKwrE=.hash
-D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\netstandard2.1\integrity\1k9jAyOxzyUzTb_a01hPGQl6aZ-s21BTDhizNv-sTzc=.hash
+D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\netstandard2.1\integrity\yNdNsVfiF_HccylQeIp2qNey5JX4p7pxlubJoLwHgnA=.hash
+D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\netstandard2.1\integrity\r6toxUzvv3VD47WtjnY2Uxji1kg56Vg7w7GtIUAotOY=.hash
+D:\Programmieren\FlappyBirdBlazor\FlappyBirdDemo\FlappyBirdDemo.Web\obj\Debug\netstandard2.1\integrity\64ARA3nMM9Bn_TWYxlL6USgV86wlyeVIUc6zxIH3w8c=.hash
