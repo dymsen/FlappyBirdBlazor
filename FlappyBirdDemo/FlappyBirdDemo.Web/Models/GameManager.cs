@@ -52,5 +52,11 @@ namespace FlappyBirdDemo.Web.Models
         {
             IsRunning = false;
         }
+
+        public void Jump()
+        {
+            if (IsRunning)
+                Bird.Jump();
+        }
     }
 }
