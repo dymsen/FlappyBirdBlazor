@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kZjo5Q2y2tV0Id3p42dt89r7ONdxqb6TSf8gexMX/cK9msuz9xLIxhhG4ME0HEuOxSgRgwA0aWQWCKEQiShviA==",
+  "dgSpecHash": "yCsRpPrF9/Yg6Cd98qSf7O23EPc0Pimh4dX27tf/Lt0aE6/VR9GTJ8+RUYbBhTMpspVCZq+mbdpt9pWT8HV6cA==",
   "success": true,
   "projectFilePath": "D:\\Programmieren\\FlappyBirdBlazor\\FlappyBirdDemo\\FlappyBirdDemo.Web\\FlappyBirdDemo.Web.csproj",
   "expectedPackageFiles": [
@@ -35,7 +35,7 @@
     "C:\\Users\\Andi\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Andi\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\Andi\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
-    "C:\\Users\\Andi\\.nuget\\packages\\system.net.http.json\\3.2.0\\system.net.http.json.3.2.0.nupkg.sha512",
+    "C:\\Users\\Andi\\.nuget\\packages\\system.net.http.json\\3.2.1\\system.net.http.json.3.2.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Andi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
     "C:\\Users\\Andi\\.nuget\\packages\\system.text.encodings.web\\4.7.1\\system.text.encodings.web.4.7.1.nupkg.sha512",

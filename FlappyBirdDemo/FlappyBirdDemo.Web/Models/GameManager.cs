@@ -60,6 +60,13 @@ namespace FlappyBirdDemo.Web.Models
         {
             if (Bird.IsOnGround())
                 GameOver();
+
+            var centeredPipe = Pipes.FirstOrDefault(p => p.IsCentered());
+
+            if(centeredPipe != null)
+            {
+
+            }
         }
         void ManagePipes()
         {
