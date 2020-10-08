@@ -1,13 +1,8 @@
-﻿<div class="pipe" style="@_topPipeCss"></div>
-<div class="pipe" style="@_bottompipeCss"></div>
+﻿@using FlappyBirdDemo.Web.Models
 
+<div class="pipe top" style="@_topPipeCss"></div>
+<div class="pipe" style="@_bottomPipeCss"></div>
 
-@code {
-    [Parameter] public PipeModel Model { get; set; }
-
-    string _bottompipeCss => 
-        $"left: {Model.DistanceFromLeft}px; bottom: {Model.DistanceFromBottom}px";
-
-    string _topPipeCss => 
-        $"left: {Model.DistanceFromLeft}px; bottom: {Model.DistanceFromBottom + 300 + Model.Gab}px";
-}
+@code { [Parameter] public PipeModel Model { get; set; }
+            string _topPipeCss => $"bottom: {Model.DistanceFromBottom + 430}px; left: {Model.DistanceFromLeft}px";
+            string _bottomPipeCss => $"bottom: {Model.DistanceFromBottom}px; left: {Model.DistanceFromLeft}px"; }

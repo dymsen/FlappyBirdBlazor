@@ -1,37 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FlappyBirdDemo.Web.Models
 {
     public class PipeModel
     {
+        private readonly int _speed = 2;
+
         public int DistanceFromLeft { get; private set; } = 500;
-        public int DistanceFromBottom { get; private set; } = new Random().Next(0, 60);
-        public int Speed { get; private set; } = 2;
-        public int Gab { get; private set; } = 130;
-
-        public int GapBottom => DistanceFromBottom + 300;
-
-        public int GapTop => GapBottom + Gab;
-
+        public int DistanceFromBottom { get; private set; } = new Random().Next(1, 60);
+        public int GapLower => 300 - 150 + DistanceFromBottom; // pipe height - ground height + pipe distance from bottom
+        public int GapUpper => 430 - 150 + DistanceFromBottom; // pipe gap - ground height + pipe distance from bottom
 
         public void Move()
         {
-            DistanceFromLeft -= Speed;
-        }
-        public bool IsOffScreen()
-        {
-            return DistanceFromLeft <= -60; 
+            DistanceFromLeft -= _speed;
         }
 
         public bool IsCentered()
         {
-            bool hasEnteredCenter = DistanceFromLeft <= (500 / 2) + (60 / 2);
-            bool hasExitedCenter = DistanceFromLeft <= (500 / 2) - (60 / 2) - 60;
+            // half of the game width minus half the width of the bird
+            var gameCenterLeft = (500 - 60) / 2;
 
-            return hasEnteredCenter && !hasExitedCenter;
+            // half of the game width plus half the width of the bird
+            var gameCenterRight = (500 + 60) / 2;
+
+            return (DistanceFromLeft < gameCenterRight && DistanceFromLeft > gameCenterLeft - 60);
         }
     }
 }

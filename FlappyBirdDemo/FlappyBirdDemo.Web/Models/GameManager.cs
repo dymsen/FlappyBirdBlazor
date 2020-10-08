@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,41 +11,29 @@ namespace FlappyBirdDemo.Web.Models
 
         public event EventHandler MainLoopCompleted;
 
+        public bool IsRunning { get; private set; } = false;
+
         public BirdModel Bird { get; private set; }
         public List<PipeModel> Pipes { get; private set; }
-        public bool IsRunning { get; private set; } = false;
+
         public GameManager()
         {
-            Bird = new BirdModel();
-            Pipes = new List<PipeModel>();
+            ResetGameObjects();
         }
 
         public async void MainLoop()
         {
             IsRunning = true;
+
             while (IsRunning)
             {
-                MoveObjects();
+                MoveGameObjects();
                 CheckForCollisions();
                 ManagePipes();
+
                 MainLoopCompleted?.Invoke(this, EventArgs.Empty);
                 await Task.Delay(20);
             }
-        }
-
-        public void StartGame()
-        {
-            if (!IsRunning)
-            {
-                Bird = new BirdModel();
-                Pipes = new List<PipeModel>();
-                MainLoop();
-            }
-        }
-
-        public void GameOver()
-        {
-            IsRunning = false;
         }
 
         public void Jump()
@@ -56,33 +42,67 @@ namespace FlappyBirdDemo.Web.Models
                 Bird.Jump();
         }
 
-        public void CheckForCollisions()
+        public void StartGame()
+        {
+            if (!IsRunning)
+            {
+                ResetGameObjects();
+                MainLoop();
+            }
+        }
+
+        private void CheckForCollisions()
         {
             if (Bird.IsOnGround())
                 GameOver();
 
-            var centeredPipe = Pipes.FirstOrDefault(p => p.IsCentered());
-
-            if(centeredPipe != null)
+            var centeredPipe = GetCenteredPipe();
+            if (centeredPipe != null &&
+                (Bird.DistanceFromGround < centeredPipe.GapLower ||
+                Bird.DistanceFromGround > centeredPipe.GapUpper - 45)) // <-- minus bird height
             {
-
+                GameOver();
             }
-        }
-        void ManagePipes()
-        {
-            if (!Pipes.Any() || Pipes.Last().DistanceFromLeft <= 250)
-                Pipes.Add(new PipeModel());
 
-            if (Pipes.First().IsOffScreen())
+        }
+
+        private void ManagePipes()
+        {
+            if (!Pipes.Any() || Pipes.Last().DistanceFromLeft < 250)
+                GeneratePipe();
+
+            if (Pipes.First().DistanceFromLeft < -60)
                 Pipes.Remove(Pipes.First());
         }
-        public void MoveObjects()
+
+        private void MoveGameObjects()
         {
             Bird.Fall(_gravity);
             foreach (var pipe in Pipes)
             {
                 pipe.Move();
             }
+        }
+
+        private void GameOver()
+        {
+            IsRunning = false;
+        }
+
+        private void GeneratePipe()
+        {
+            Pipes.Add(new PipeModel());
+        }
+
+        private PipeModel GetCenteredPipe()
+        {
+            return Pipes.FirstOrDefault(p => p.IsCentered());
+        }
+
+        private void ResetGameObjects()
+        {
+            Bird = new BirdModel();
+            Pipes = new List<PipeModel>();
         }
     }
 }
