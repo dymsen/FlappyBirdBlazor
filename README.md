@@ -1,2 +1,2 @@
 # FlappyBirdBlazor
-I will programming the Game **FlappyBird** under Blazor with C#. 
+A **FlappyBird** clone game under Blazor wasm with C#. 
