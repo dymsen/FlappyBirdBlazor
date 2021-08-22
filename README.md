@@ -1,7 +1,7 @@
 Description
 -----------
-A **FlappyBird** clone game under Blazor wasm with C#. 
-- The original version of Flappy Bird was created by Ha Dong Nguyen and was removed from the app stores on 9.2.2014.
+- A **FlappyBird** clone game under Blazor wasm with C#. 
+The original version of Flappy Bird was created by Ha Dong Nguyen and was removed from the app stores on 9.2.2014.
 
 Playing the game
 -------------------------
